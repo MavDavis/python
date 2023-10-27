@@ -1,4 +1,4 @@
-david = "David is coming soon!";
+david = "David is coming soon!"
 david2 = david.split(" ")
 print(david2)
 # ['David', 'is', 'coming', 'soon!']
