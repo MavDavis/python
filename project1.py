@@ -7,5 +7,5 @@ def roll():
     max_value = 6
     roll = random.radiant(min_value, max_value)
     return roll
-# 
+# test
     value = roll()
