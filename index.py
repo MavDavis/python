@@ -16,7 +16,7 @@ else:
 print(f"The student's grade is {grade}")
 
 # to find a number that is least in an array
-# ******************************
+
 numbers = [10, 5, 7, 2, 15, 1, 8]
 
 # Initialize a variable to store the smallest number
