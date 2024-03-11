@@ -1,6 +1,7 @@
 import random
 
 top_of_number = input("Enter a number: ")
+# 
 if top_of_number.isdigit():
     top_of_number = int(top_of_number)
     if top_of_number <=0:
