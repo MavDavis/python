@@ -1,0 +1,9 @@
+when you need an event to loop till failed or passed condition. use a while loop 
+eg:
+while True:
+ // work
+ break;
+ continue;
+
+ 
+
