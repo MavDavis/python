@@ -13,6 +13,14 @@ def run(server_class=HTTPServer, handler_class=RequestHandler, port=8000):
     httpd = server_class(server_address, handler_class)
     print(f'Starting server on port {port}...')
     httpd.serve_forever()
-
 if __name__ == '__main__':
     run()
+    import time
+
+    def delayed_function():
+        print("This message will be printed after 2 seconds.")
+
+    time.sleep(2)
+
+    # Call the delayed function
+    delayed_function()
