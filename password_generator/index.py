@@ -8,8 +8,6 @@ cipher = Fernet(key)
 
 
 cipher_text = cipher.encrypt()
-
-
 # Decrypt the data
 decrypted_text = cipher.decrypt(cipher_text)
 
