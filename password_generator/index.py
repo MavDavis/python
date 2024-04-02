@@ -8,7 +8,7 @@ cipher = Fernet(key)
 
 
 cipher_text = cipher.encrypt()
-# Decrypt the data 
+# Decrypt the data brfore using
 decrypted_text = cipher.decrypt(cipher_text)
 
 print("Decrypted:", decrypted_text.decode())
