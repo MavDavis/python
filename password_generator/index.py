@@ -1,18 +1,22 @@
 from cryptography.fernet import Fernet
-
 # Generate a key
-key = Fernet.generate_key()
 
-# Initialize the Fernet cipher
-cipher = Fernet(key)
+'''
+def write_key():
 
+    key = Fernet.generate_key()
+    with open("key.key", "wb") as key_file:
+        key_file.write(key)
+        '''
 
-cipher_text = cipher.encrypt()
-# Decrypt the data brfore using
-decrypted_text = cipher.decrypt(cipher_text)
-
-print("Decrypted:", decrypted_text.decode())
+def load_key():
+    with open("key.key", "rb") as file:
+        key = file.read()
+        return key
 master_pwd = input("What is your master password? ")
+key = load_key()
+fer = Fernet(key)
+print(fer, key)
 def view():
     with open('password.txt', 'r') as f:
         for line in f.readlines():
