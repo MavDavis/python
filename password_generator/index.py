@@ -1,13 +1,12 @@
 from cryptography.fernet import Fernet
 # Generate a key
 
-'''
-def write_key():
+# def write_key():
 
-    key = Fernet.generate_key()
-    with open("key.key", "wb") as key_file:
-        key_file.write(key)
-        '''
+#     key = Fernet.generate_key()
+#     with open("key.key", "wb") as key_file:
+#         key_file.write(key)
+
 
 def load_key():
     with open("key.key", "rb") as file:
