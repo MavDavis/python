@@ -12,7 +12,8 @@ def load_key():
     with open("key.key", "rb") as file:
         key = file.read()
         return key
-master_pwd = input("What is your master password? ")
+# master_pwd = input("What is your master password? ")
+# key = load_key() + master_pwd.encode()
 key = load_key()
 fer = Fernet(key)
 print(fer, key)
@@ -21,7 +22,7 @@ def view():
         for line in f.readlines():
             data = line.rstrip()
             user,passwrd = data.split("|")
-            print("username: " + user + " password: " + passwrd)
+            print("username: " + user + " password: " + fer.decrypt(passwrd.encode()).decode())
 
 
 def add():
@@ -33,7 +34,7 @@ def add():
     # use w to overwrite the content of the file(write)
     #  with helps us to close the text file than the method of (file = open(name.txt) and then file.close())
     with open('password.txt', 'a') as f:
-        f.write(account_name + " | "+pwd + "\n")
+        f.write(account_name + " | "+ fer.encrypt(pwd.encode()).decode() + "\n")
 
 while True:
     mode = input("Do you want to create new passwords or view existing passwords(Enter View or Add)? Enter q to quit ").lower()
