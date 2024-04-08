@@ -5,7 +5,7 @@ import random
 def roll():
     min_value = 1
     max_value = 6
-    roll = random.random(min_value, max_value)
+    roll = random.randint(min_value, max_value)
     return roll
 user1 = input("Enter your username: ")
 computer = "Computer"
@@ -16,6 +16,7 @@ if user1:
     value = int(value)
     while value > 0:
             dice = roll()
+            print(dice)
             value -=1
             
             continue
@@ -25,5 +26,4 @@ else:
   while value > 0:
         dice = roll()
         value -=1
-
-print(random)
+        continue
