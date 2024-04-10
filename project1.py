@@ -1,4 +1,4 @@
-# importing random function
+# importing random 
 import random
 
 # define a function
