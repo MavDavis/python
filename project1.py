@@ -1,3 +1,4 @@
+# import random 
 import random
 
 # define a function
