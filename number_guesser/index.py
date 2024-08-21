@@ -1,7 +1,7 @@
 import random
 
 top_of_number = input("Enter max number: ")
-
+# test
 if top_of_number.isdigit():
     top_of_number = int(top_of_number)
     if top_of_number <=0:
