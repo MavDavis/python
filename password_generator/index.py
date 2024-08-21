@@ -9,7 +9,7 @@ from cryptography.fernet import Fernet
 
 
 def load_key():
-    with open("key.key", "rb") as file:
+    with open("./key.key", "rb") as file:
         key = file.read()
         return key
 # master_pwd = input("What is your master password? ")
